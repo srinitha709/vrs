@@ -17,6 +17,9 @@ strict: true
 imports:
   gks-core: ../gks-core/gks-core-source.yaml
 
+namespaces:
+  gks.core: /ga4gh/schema/gks-core/1.x/json/
+
 $defs:
   # VRS definitions are presented top-down.  Everything rolls up to
   # Variation, which is a polymorphic abstraction of many kinds of
@@ -143,7 +146,7 @@ $defs:
           MUST be "Allele"
       location:
         oneOf:
-          - $ref: "/ga4gh/schema/gks-core/1.x/json/iriReference"
+          - $refCurie: gks.core:iriReference
           - $ref: "#/$defs/Location"
         description: >-
           The location of the Allele
@@ -178,7 +181,7 @@ $defs:
         items:
           oneOf:
             - $ref: "#/$defs/Allele"
-            - $ref: "/ga4gh/schema/gks-core/1.x/json/iriReference" 
+            - $refCurie: gks.core:iriReference
         description: >-
           A list of :ref:`Alleles <Allele>` that are found in-cis on a shared molecule.
       sequenceReference:
@@ -204,7 +207,7 @@ $defs:
     heritableProperties:
       location:
         oneOf:
-          - $ref: "/ga4gh/schema/gks-core/1.x/json/iriReference"
+          - $refCurie: gks.core:iriReference
           - $ref: "#/$defs/Location"
         description: >-
           A location for which the number of systemic copies is described.
@@ -255,9 +258,9 @@ $defs:
         description: >-
           MUST be "CopyNumberChange"
       copyChange:
-        $ref: "/ga4gh/schema/gks-core/1.x/json/Coding"
+        $refCurie: gks.core:MappableConcept
         description: >-
-          MUST be a :ref:`Coding` representing one of "EFO:0030069" (complete genomic loss), "EFO:0020073" (high-level loss),
+          MUST use a `primaryCode` representing one of "EFO:0030069" (complete genomic loss), "EFO:0020073" (high-level loss),
           "EFO:0030068" (low-level loss), "EFO:0030067" (loss), "EFO:0030064" (regional base ploidy),
           "EFO:0030070" (gain), "EFO:0030071" (low-level gain), "EFO:0030072" (high-level gain).
     required: [ "copyChange" ]
@@ -294,7 +297,7 @@ $defs:
         description: MUST be "SequenceLocation"
       sequenceReference:
         oneOf:
-          - $ref: "/ga4gh/schema/gks-core/1.x/json/iriReference"
+          - $refCurie: gks.core:iriReference
           - $ref: "#/$defs/SequenceReference"
         description: A reference to a :ref:`Sequence` on which the location is defined.
       start:
@@ -522,7 +525,7 @@ $defs:
         ordered: true
         items:
           oneOf:
-          - $ref: "/ga4gh/schema/gks-core/1.x/json/iriReference"
+          - $refCurie: gks.core:iriReference
           - $ref: "#/$defs/Location"
           not:
             required: ["start", "end"]
@@ -561,7 +564,7 @@ $defs:
         description: MUST be "Terminus".
       location:
         oneOf:
-          - $ref: "/ga4gh/schema/gks-core/1.x/json/iriReference"
+          - $refCurie: gks.core:iriReference
           - $ref: "#/$defs/Location"
         description: The location of the terminus.
     required:
@@ -590,7 +593,7 @@ $defs:
         ordered: true
         items:
           oneOf:
-          - $ref: "/ga4gh/schema/gks-core/1.x/json/iriReference"
+          - $refCurie: gks.core:iriReference
           - $ref: "#/$defs/Allele"
           - $ref: "#/$defs/CisPhasedBlock"
           - $ref: "#/$defs/Terminus"
