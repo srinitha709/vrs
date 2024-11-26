@@ -206,7 +206,7 @@ $defs:
     inherits: SystemicVariation
     type: object
     description: >-
-      The absolute count of discrete copies of a :ref:`Location` or :ref:`Gene`,
+      The absolute count of discrete copies of a :ref:`Location`
       within a system (e.g. genome, cell, etc.).
     properties:
       type:
@@ -239,7 +239,7 @@ $defs:
     inherits: SystemicVariation
     type: object
     description: >-
-      An assessment of the copy number of a :ref:`Location` or a :ref:`Gene` within a system (e.g. genome, cell,
+      An assessment of the copy number of a :ref:`Location` within a system (e.g. genome, cell,
       etc.) relative to a baseline ploidy.
     properties:
       type:
