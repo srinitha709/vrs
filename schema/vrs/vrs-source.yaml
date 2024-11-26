@@ -217,7 +217,7 @@ $defs:
           MUST be "CopyNumberCount"
       location:
         oneOf:
-          - $ref: "/ga4gh/schema/gks-core/1.x/json/iriReference"
+          - $refCurie: gks.core:iriReference
           - $ref: "#/$defs/Location"
         description: >-
           The location of the subject of the copy count.
@@ -250,7 +250,7 @@ $defs:
           MUST be "CopyNumberChange"
       location:
         oneOf:
-          - $ref: "/ga4gh/schema/gks-core/1.x/json/iriReference"
+          - $refCurie: gks.core:iriReference
           - $ref: "#/$defs/Location"
         description: >-
           The location of the subject of the copy change.
