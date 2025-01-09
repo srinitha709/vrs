@@ -26,7 +26,7 @@ be `250-contributing`.
 
 ## Pull Requests
 [Pull Requests](https://github.com/ga4gh/vrs/pulls) (PRs) for new 
-features should target the `main` branch. For version 
+features should target the `2.x` branch. For version 
 patches, the PR should target the appropriate minor version branch.
 PRs must be approved by at least one project maintainer before they may
 be merged. PR titles must reflect the issue associated with the PR. For
