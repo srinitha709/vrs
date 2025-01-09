@@ -52,10 +52,10 @@ rst_epilog = open(rst_epilog_fn).read().format(release=release)
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
-    #'sphinx.ext.todo'
-    #'sphinx.ext.autodoc',  # For pulling in docstrings
-    #'sphinx.ext.doctest',  # For testing code examples in documentation
-    #'sphinx.ext.napoleon',  # For Google and NumPy-style docstrings
+    'sphinx.ext.todo'
+    'sphinx.ext.autodoc',  # For pulling in docstrings
+    'sphinx.ext.doctest',  # For testing code examples in documentation
+    'sphinx.ext.napoleon',  # For Google and NumPy-style docstrings
 ]
 
 # Add any paths that contain templates here, relative to this directory.
